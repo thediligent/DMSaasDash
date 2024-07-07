@@ -1,6 +1,7 @@
 // material-ui
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
@@ -19,13 +20,14 @@ export default function ComponentTypography() {
         <Grid item xs={12} lg={6}>
           <Stack spacing={3}>
             <MainCard title="Basic">
-              <Stack spacing={0.75} sx={{ mt: -1.5 }}>
-                <Typography variant="h1">Manrope</Typography>
-                <Typography variant="h5">Font Family</Typography>
+              <Stack spacing={0.95} sx={{ mt: -1.5 }}>
+                <Typography variant="h6">Font Family</Typography>
+                <Typography variant="h1"component='div'><Box fontWeight='800' display='inline'>Manrope</Box></Typography>
                 <Breadcrumbs aria-label="breadcrumb">
-                  <Typography variant="h6">Regular</Typography>
-                  <Typography variant="h6">Medium</Typography>
-                  <Typography variant="h6">Bold</Typography>
+                  <Typography variant="p" component='div'><Box fontWeight='400' display='inline'>Light</Box></Typography>
+                  <Typography variant="p">Regular</Typography>
+                  <Typography variant="p" component='div'><Box fontWeight='700' display='inline'>Medium</Box></Typography>
+                  <Typography variant="p" component='div'><Box fontWeight='900' display='inline'>Bold</Box></Typography>
                 </Breadcrumbs>
               </Stack>
             </MainCard>
