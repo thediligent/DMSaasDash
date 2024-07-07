@@ -5,7 +5,7 @@ import { createTheme } from '@mui/material/styles';
 import { presetPalettes } from '@ant-design/colors';
 
 // project import
-import ThemeOption from './theme/index';
+import ThemeOption from './theme/index_orig';
 
 // ==============================|| DEFAULT THEME - PALETTE ||============================== //
 
@@ -13,22 +13,20 @@ export default function Palette(mode, presetColor) {
   const colors = presetPalettes;
 
   let greyPrimary = [
-    '#131022',
-    '#1E204C',
-    '#15132a',
-    '#F3F6FF11',
-    '#8c8c8c',
+    '#ffffff',
+    '#fafafa',
+    '#f5f5f5',
+    '#f0f0f0',
+    '#d9d9d9',
     '#bfbfbf',
-    '#a5b4fc17',
-    '#696A88',
-    '#33378c',
-    '#1E204C',
-    '#F3F6FF'
-];
-
-let greyAscent = ['#131022', '#434343', '#a5b4fc17', '#F3F6FF'];
-
-let greyConstant = ['#e6ebf1', '#F3F6FF'];
+    '#8c8c8c',
+    '#595959',
+    '#262626',
+    '#141414',
+    '#000000'
+  ];
+  let greyAscent = ['#fafafa', '#bfbfbf', '#434343', '#1f1f1f'];
+  let greyConstant = ['#fafafb', '#e6ebf1'];
 
   colors.grey = [...greyPrimary, ...greyAscent, ...greyConstant];
 
@@ -39,23 +37,23 @@ let greyConstant = ['#e6ebf1', '#F3F6FF'];
       mode,
       common: {
         black: '#000',
-        white: '#F3F6FF',
-        primary: paletteColor.primary.main
+        white: '#fff',
+        primary: '#6366F1'
       },
       ...paletteColor,
       text: {
-        primary: '#99a0a9',
-        secondary: paletteColor.secondary.A200,
-        disabled: '#7d7b88'
+        primary: paletteColor.grey[700],
+        secondary: paletteColor.grey[500],
+        disabled: paletteColor.grey[400]
       },
       action: {
-        primary: paletteColor.primary.main,
+        primary: paletteColor.grey[700],
         disabled: paletteColor.grey[300]
       },
       divider: paletteColor.grey[200],
       background: {
-        paper: paletteColor.grey[100],
-        default: paletteColor.grey[0]
+        paper: paletteColor.grey[0],
+        default: paletteColor.grey.A50
       }
     }
   });

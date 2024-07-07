@@ -28,12 +28,12 @@ export default function Badge(theme) {
         },
         light: {
           ...defaultLightBadge,
-          '&.MuiBadge-colorPrimary': getColorStyle({ color: 'primary', theme }),
+          '&.MuiBadge-colorPrimary': getColorStyle({ color: 'primary', backgroundColor: '#071b2bd9', theme }),
           '&.MuiBadge-colorSecondary': getColorStyle({ color: 'secondary', theme }),
           '&.MuiBadge-colorError': getColorStyle({ color: 'error', theme }),
           '&.MuiBadge-colorInfo': getColorStyle({ color: 'info', theme }),
           '&.MuiBadge-colorSuccess': getColorStyle({ color: 'success', theme }),
-          '&.MuiBadge-colorWarning': getColorStyle({ color: 'warning', theme })
+          '&.MuiBadge-colorWarning':  getColorStyle({ color: 'warning', backgroundColor: '#63550a33', theme })
         }
       }
     }

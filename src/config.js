@@ -2,11 +2,11 @@
 
 const config = {
   defaultPath: '/dashboard/default',
-  fontFamily: `'Public Sans', sans-serif`,
+  fontFamily: `'Manrope', sans-serif`,
   i18n: 'en',
-  miniDrawer: false,
+  miniDrawer: true,
   container: true,
-  mode: 'light',
+  mode: 'dark',
   presetColor: 'default',
   themeDirection: 'ltr'
 };

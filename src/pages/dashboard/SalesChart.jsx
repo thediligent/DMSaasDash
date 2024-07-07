@@ -168,7 +168,7 @@ export default function SalesChart() {
       <Box sx={{ p: 2.5, pb: 0 }}>
         <Stack direction="row" alignItems="center" justifyContent="space-between">
           <Stack spacing={1.5}>
-            <Typography variant="h6" color="secondary">
+            <Typography variant="h6" color="secondary.light">
               Net Profit
             </Typography>
             <Typography variant="h4">$1560</Typography>

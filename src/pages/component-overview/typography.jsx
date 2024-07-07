@@ -20,7 +20,7 @@ export default function ComponentTypography() {
           <Stack spacing={3}>
             <MainCard title="Basic">
               <Stack spacing={0.75} sx={{ mt: -1.5 }}>
-                <Typography variant="h1">Inter</Typography>
+                <Typography variant="h1">Manrope</Typography>
                 <Typography variant="h5">Font Family</Typography>
                 <Breadcrumbs aria-label="breadcrumb">
                   <Typography variant="h6">Regular</Typography>

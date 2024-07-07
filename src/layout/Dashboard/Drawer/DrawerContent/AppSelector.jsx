@@ -14,20 +14,13 @@ import AnimateButton from 'components/@extended/AnimateButton';
 
 // ==============================|| DRAWER CONTENT - NAVIGATION CARD ||============================== //
 
-export default function NavCard() {
+export default function AppSelector() {
   return (
-    <MainCard sx={{ bgcolor: 'grey.50', m: 3 }}>
-      <Stack alignItems="center" spacing={2.5}>
-        <CardMedia component="img" image={avatar} sx={{ width: 112 }} />
-        <Stack alignItems="center">
-          <Typography variant="h5">DMS Pro</Typography>
-          <Typography variant="h6" color="secondary">
-            Advacned features
-          </Typography>
-        </Stack>
+    <MainCard sx={{ bgcolor: 'grey.50', m: 2 }}>
+      <Stack alignItems="left" spacing={1.5}>
         <AnimateButton>
-          <Button component={Link} target="_blank" href="https://diligentmarketing.solutions" variant="contained" color="success" size="small">
-            Pro
+          <Button component={Link} target="_blank" href="https://diligentmarketing.solutions" variant="contained" color="primary" size="small" fullWidth>
+            Apps
           </Button>
         </AnimateButton>
       </Stack>

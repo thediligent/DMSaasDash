@@ -1,4 +1,5 @@
 // project import
+import AppSelector from './AppSelector';
 import NavCard from './NavCard';
 import Navigation from './Navigation';
 import SimpleBar from 'components/third-party/SimpleBar';
@@ -9,6 +10,7 @@ export default function DrawerContent() {
   return (
     <>
       <SimpleBar sx={{ '& .simplebar-content': { display: 'flex', flexDirection: 'column' } }}>
+        <AppSelector />
         <Navigation />
         <NavCard />
       </SimpleBar>

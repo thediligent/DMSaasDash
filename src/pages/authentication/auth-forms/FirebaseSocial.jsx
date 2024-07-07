@@ -34,7 +34,7 @@ export default function FirebaseSocial() {
     >
       <Button
         variant="outlined"
-        color="secondary"
+        color="tertiary"
         fullWidth={!downSM}
         startIcon={<img src={Google} alt="Google" />}
         onClick={googleHandler}
@@ -43,7 +43,7 @@ export default function FirebaseSocial() {
       </Button>
       <Button
         variant="outlined"
-        color="secondary"
+        color="tertiary"
         fullWidth={!downSM}
         startIcon={<img src={Twitter} alt="Twitter" />}
         onClick={twitterHandler}
@@ -52,7 +52,7 @@ export default function FirebaseSocial() {
       </Button>
       <Button
         variant="outlined"
-        color="secondary"
+        color="tertiary"
         fullWidth={!downSM}
         startIcon={<img src={Facebook} alt="Facebook" />}
         onClick={facebookHandler}
