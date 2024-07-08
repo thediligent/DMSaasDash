@@ -16,7 +16,7 @@ function BookPage() {
   const getBooks = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://openlibrary.org/search.json?q=the+lord+of+the+rings');
+      const response = await axios.get('//openlibrary.org/search.json?q=the+lord+of+the+rings');
       setBooks(response.data.docs);
     } catch (error) {
       console.error('Error fetching books:', error);
