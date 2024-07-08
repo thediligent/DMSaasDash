@@ -1,10 +1,11 @@
 // assets
-import { ChromeOutlined, QuestionOutlined } from '@ant-design/icons';
+import { ChromeOutlined, QuestionOutlined, BookOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
   ChromeOutlined,
-  QuestionOutlined
+  QuestionOutlined,
+  BookOutlined
 };
 
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
@@ -14,6 +15,13 @@ const support = {
   title: 'Support',
   type: 'group',
   children: [
+    {
+      id: 'book-page',
+      title: 'Books Page',
+      type: 'item',
+      url: '/book-page',
+      icon: icons.BookOutlined
+    },
     {
       id: 'sample-page',
       title: 'Sample Page',
