@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import authService from '../../../../../api/authService';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -50,6 +51,12 @@ function a11yProps(index) {
 
 export default function Profile() {
   const theme = useTheme();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userData = authService.getCurrentUser();
+    setUser(userData);
+  }, []);
 
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
@@ -68,6 +75,15 @@ export default function Profile() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const handleLogout = async () => {
+    try {
+      await authService.logout();
+      // Redirect to login page or refresh the app state
+      window.location.href = '/login';
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
 
   const iconBackColorOpen = 'grey.100';
@@ -89,9 +105,9 @@ export default function Profile() {
         onClick={handleToggle}
       >
         <Stack direction="row" spacing={1.25} alignItems="center" sx={{ p: 0.5 }}>
-          <Avatar alt="profile user" src={avatar1} size="sm" />
+          <Avatar alt="profile user" src={user?.image_url || avatar1} size="sm" />
           <Typography variant="subtitle1" sx={{ textTransform: 'capitalize' }}>
-            John Doe
+            {user ? user.name : 'Loading...'}
           </Typography>
         </Stack>
       </ButtonBase>
@@ -122,18 +138,18 @@ export default function Profile() {
                     <Grid container justifyContent="space-between" alignItems="center">
                       <Grid item>
                         <Stack direction="row" spacing={1.25} alignItems="center">
-                          <Avatar alt="profile user" src={avatar1} sx={{ width: 32, height: 32 }} />
+                          <Avatar alt="profile user" src={user?.image_url || avatar1} sx={{ width: 32, height: 32 }} />
                           <Stack>
-                            <Typography variant="h6">John Doe</Typography>
+                            <Typography variant="h6">{user ? user.name : 'Loading...'}</Typography>
                             <Typography variant="body2" color="text.secondary">
-                              UI/UX Designer
+                              {user ? user.roles[0]?.display_name || 'No role' : 'Loading...'}
                             </Typography>
                           </Stack>
                         </Stack>
                       </Grid>
                       <Grid item>
                         <Tooltip title="Logout">
-                          <IconButton size="large" sx={{ color: 'text.primary' }}>
+                          <IconButton size="large" sx={{ color: 'text.primary' }} onClick={handleLogout}>
                             <LogoutOutlined />
                           </IconButton>
                         </Tooltip>

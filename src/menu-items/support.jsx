@@ -11,8 +11,8 @@ const icons = {
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
 
 const support = {
-  id: 'support',
-  title: 'Support',
+  id: 'Resources',
+  title: 'Resources',
   type: 'group',
   children: [
     {
@@ -33,7 +33,7 @@ const support = {
       id: 'documentation',
       title: 'Documentation',
       type: 'item',
-      url: 'https://codedthemes.gitbook.io/mantis/',
+      url: 'https://brand.diligentmarketing.solutions/',
       icon: icons.QuestionOutlined,
       external: true,
       target: true
